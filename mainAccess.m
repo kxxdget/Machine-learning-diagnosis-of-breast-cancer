@@ -1,24 +1,11 @@
-% ÓÃÓÚ¼ÆËã£¨ÁÚÓò´Ö²Ú¼¯£©´úÊý¹ÛÏÂÌõ¼þÊôÐÔÖØÒª¶ÈµÄÖ÷Èë¿Ú³ÌÐò
-% °üº¬×Ó³ÌÐòÓÐweigthD£¨¼ÆËãÈ¨ÖØ£©¡¢getPosSet£¨¼ÆËãÕýÓò£©reduceSet£¨Ô¼¼ò¼ÆËã£©
-%
-%   ¸üÐÂËµÃ÷£º Ìí¼ÓÁËÒ»¸öÊý¾ÝÅÐ¶Ï£¬ÅÐ¶ÏÊý¾ÝÖÐÊÇ·ñ´æÔÚÄ³ÁÐ¾ßÓÐÏàÍ¬Êý¾Ý
-%             ±ÜÃâÁËºÜ¶àÍøÓÑËµµ½µÄ flag2 Î´¶¨ÒåÏÖÏó
-%   ¸üÐÂÈÕÆÚ£º2015.04.06 £¨¿´¿´ÉÏ´Î·¢²¼£¬ÒÑ¾­Ê±¸ôÒ»ÄêÁË°¡£¡ÀÏÁË°¡£©
-%
-% Made by suozi 20140428
-% QQ£º379786867
 
-clc;
-clear 
-
-load('breast.mat') % ¼ÓÔØµÄtest.matÊý¾ÝÎªÁÚÓò´Ö²Ú¼¯Ê¹ÓÃµÄÊýÖµÐÍ¾ö²ßÏµÍ³Êý¾Ý
-%load('test.txt') % Í¬Ñ§ÃÇÔÚ¼ÓÔØÊý¾ÝµÄÊ±ºòÒ²¿ÉÒÔÖ±½Ó¼ÓÔØtxt¸öÊýÊý¾Ý£¬»òÕßexcel¸ñÊ½µÄÎÄ¼þ
-% ×îºóÒ»ÁÐÎª¾ö²ßÊôÐÔ
-
+load('breast.mat') % åŠ è½½çš„test.matæ•°æ®ä¸ºé‚»åŸŸç²—ç³™é›†ä½¿ç”¨çš„æ•°å€¼åž‹å†³ç­–ç³»ç»Ÿæ•°æ®
+%load('test.txt') % åŒå­¦ä»¬åœ¨åŠ è½½æ•°æ®çš„æ—¶å€™ä¹Ÿå¯ä»¥ç›´æŽ¥åŠ è½½txtä¸ªæ•°æ•°æ®ï¼Œæˆ–è€…excelæ ¼å¼çš„æ–‡ä»¶
+% æœ€åŽä¸€åˆ—ä¸ºå†³ç­–å±žæ€§
 lammda=0.6; %???
-% ÕâÀïlammdaÈ¡Öµ¾¡Á¿ÔÚ0.5~1.5Ö®¼ä£¬Èç¹ûÌ«´ó£¬Ôò²»ÄÜÊä³öÕý³£½á¹û£¬Èç¹ûÌ«Ð¡£¬Ôò³ÌÐò±¨´í
-% Èç¹ûÊý¾ÝÄÚ°üº¬µÄÑù±¾Êý±È½Ï¶à£¨¼¸Ê®ÒÔÉÏ£©£¬Ôòµ÷´ólammda=2~4
-sig_ctrl=0.1; %ÖØÒª¶ÈÏÂÏÞµÄ¿ØÖÆ²ÎÊý£¬È¡½Ó½ü0µÄÊý
+% è¿™é‡Œlammdaå–å€¼å°½é‡åœ¨0.5~1.5ä¹‹é—´ï¼Œå¦‚æžœå¤ªå¤§ï¼Œåˆ™ä¸èƒ½è¾“å‡ºæ­£å¸¸ç»“æžœï¼Œå¦‚æžœå¤ªå°ï¼Œåˆ™ç¨‹åºæŠ¥é”™
+% å¦‚æžœæ•°æ®å†…åŒ…å«çš„æ ·æœ¬æ•°æ¯”è¾ƒå¤šï¼ˆå‡ åä»¥ä¸Šï¼‰ï¼Œåˆ™è°ƒå¤§lammda=2~4
+sig_ctrl=0.1; %é‡è¦åº¦ä¸‹é™çš„æŽ§åˆ¶å‚æ•°ï¼Œå–æŽ¥è¿‘0çš„æ•°
 % PosSet = getPosSet(Wine,lammda);
-redSet = reduceSet(binayaqi,lammda,sig_ctrl); %¼ÆËãÔ¼¼ò¼¯ºÏ
-weight = weightD(binayaqi,lammda); %¼ÆËãÈ¨ÖØ
+redSet = reduceSet(binayaqi,lammda,sig_ctrl); %è®¡ç®—çº¦ç®€é›†åˆ
+weight = weightD(binayaqi,lammda); %è®¡ç®—æƒé‡
