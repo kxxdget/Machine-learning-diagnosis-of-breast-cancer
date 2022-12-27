@@ -1,20 +1,3 @@
-%% 代码说明：
-% 单参数决策粗糙集  Single-Parameter Decision-Theoretic Rough Set Model (SPDTRS)
-% The information of this paper is:
-% M. Suo, L. Tao, B. Zhu, X. Miao, Z. Liang, Y. Ding, X. Zhang, T. Zhang, Single-parameter decision-theoretic rough set, Information Sciences (2020), 
-% doi: https://doi.org/10.1016/j.ins.2020.05.124
-% 请尊重代码原创者的知识产权，在应用此代码的时候做必要的引用（引用信息如上，如果分配了期卷号，则引用信息调整至包含期卷号的形式）
-% 严禁此代码用于任何商业用途！否则版权必究！
-% Main idea:
-% A methodology to determine the parameters for Decision-Theoretic Rough Set (DTRS) and Three-Way Decisions (3WD) is proposed to improve their practicability.
-% First, a data-driven loss function matrix is introduced based on the significance and the probability of the sample.
-% Subsequently, a generalized rough set model named single-parameter decision-theoretic rough set (SPDTRS) is put forward 
-% based on the proposed loss function matrix. The main feature of the proposed model is that there is only one parameter 
-% that should be preset rather than the two or six parameters in the traditional DTRS models.
-% Editor: suozi
-% QQ/Wechat：379786867
-% Email: buaasuozi@126.com
-% BUAA-PHM  2019.05.29 - 2020.06.05
 
 %% risk computing
 function risk = risk_fun_SPDTRS(data,label,zeta,Xcell)
@@ -24,7 +7,9 @@ function risk = risk_fun_SPDTRS(data,label,zeta,Xcell)
 %          delta   the fuzzy neighborhood radius  0<= <=1
 %          Xcell   the decision class set
 % output:  risk    the global risk of data set
-
+% The information of this paper is:
+% M. Suo, L. Tao, B. Zhu, X. Miao, Z. Liang, Y. Ding, X. Zhang, T. Zhang, Single-parameter decision-theoretic rough set, Information Sciences (2020), 
+% doi: https://doi.org/10.1016/j.ins.2020.05.12
 risk = 0;
 m = size(data,1);
 
