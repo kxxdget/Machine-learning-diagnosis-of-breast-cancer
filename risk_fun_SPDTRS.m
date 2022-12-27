@@ -7,9 +7,7 @@ function risk = risk_fun_SPDTRS(data,label,zeta,Xcell)
 %          delta   the fuzzy neighborhood radius  0<= <=1
 %          Xcell   the decision class set
 % output:  risk    the global risk of data set
-% The information of this paper is:
-% M. Suo, L. Tao, B. Zhu, X. Miao, Z. Liang, Y. Ding, X. Zhang, T. Zhang, Single-parameter decision-theoretic rough set, Information Sciences (2020), 
-% doi: https://doi.org/10.1016/j.ins.2020.05.12
+% M. Suo, L. Tao, B. Zhu, X. Miao, Z. Liang, Y. Ding, X. Zhang, T. Zhang, Single-parameter decision-theoretic rough set, Information Sciences (2020), % doi: https://doi.org/10.1016/j.ins.2020.05.12
 risk = 0;
 m = size(data,1);
 
