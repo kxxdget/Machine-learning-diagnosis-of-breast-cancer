@@ -1,7 +1,4 @@
-% label ÖØĞÂÅÅĞò
-% suozi 2019.05.30
 
-% preprocess:  % Îª±ÜÃâÖîÈçbiodegµÄÎÊÌâ ±êÇ©Îª 2 1 ...  -1  1 ÕâÑù²»»áÑÏ¸ñÉıĞò
 function [dataout,labelout] = resortLabel_fun(data,label)
 % input:     data   raw data
 %            label  raw label
@@ -14,7 +11,7 @@ numclass = numel(class);
 comdata = [data,label];
 comdata = sortrows(comdata,n+1);
 dataout = comdata(:,1:n);
-label = comdata(:,end);% ÕûÀí±êÇ©£¬ÒÔ±£Ö¤±êÇ©¾ùÎªÕıÖµ ÇÒÑÏ¸ñÉıĞò
+label = comdata(:,end);% æ•´ç†æ ‡ç­¾ï¼Œä»¥ä¿è¯æ ‡ç­¾å‡ä¸ºæ­£å€¼ ä¸”ä¸¥æ ¼å‡åº
 labelout = label;
 for i = 1:numclass
     index = find(label == class(i));
